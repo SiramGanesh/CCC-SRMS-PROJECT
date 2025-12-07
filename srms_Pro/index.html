@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Management System</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Using Google Fonts for a nicer look -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <h1>Student Record System</h1>
+            <p>Manage your students easily and efficiently</p>
+        </header>
+
+        <section class="form-section">
+            <h2>Add New Student</h2>
+            <form id="studentForm">
+                <div class="input-group">
+                    <label for="name">Student Name</label>
+                    <input type="text" id="name" placeholder="Enter full name" required>
+                </div>
+                <div class="input-group">
+                    <label for="rollNo">Roll Number</label>
+                    <input type="number" id="rollNo" placeholder="e.g. 101" required>
+                </div>
+                <div class="input-group">
+                    <label for="classGrade">Class / Grade</label>
+                    <input type="text" id="classGrade" placeholder="e.g. 10th A" required>
+                </div>
+                <div class="input-group">
+                    <label for="cgpa">CGPA</label>
+                    <input type="number" id="cgpa" step="0.01" min="0" max="10" placeholder="e.g. 8.5" required>
+                </div>
+                <button type="submit" class="btn-add">Add Student</button>
+            </form>
+        </section>
+
+        <section class="list-section">
+            <h2>Student List</h2>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search by name...">
+            </div>
+            <div class="table-container">
+                <table id="studentTable">
+                    <thead>
+                        <tr>
+                            <th>Roll No</th>
+                            <th>Name</th>
+                            <th>Class</th>
+                            <th>CGPA</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- Student rows will be added here by JavaScript -->
+                    </tbody>
+                </table>
+                <p id="noDataMessage" class="no-data">No students added yet.</p>
+            </div>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
